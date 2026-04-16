@@ -70,28 +70,27 @@ The system follows a hybrid AI architecture combining retrieval, structured reas
 
 ## Project Structure
 
-```bash
+```text
 O-RAN-GPT/
-├── app.py                    # Main application entry point
-├── query_engine.py           # Query handling and orchestration
-├── knowledge_engine.py       # Structured knowledge and rule-based logic
+├── app.py                     # Main application entry point
+├── query_engine.py            # Query handling and orchestration
+├── knowledge_engine.py        # Structured knowledge and rule-based logic
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
 │
-├── knowledge/                # Structured domain knowledge
-│   ├── relationships.json    # Telecom/O-RAN relationships
-│   ├── known_unknowns.json   # Controlled uncertainty handling
-│   └── kb_evidence.json      # Supporting evidence / extracted knowledge
+├── knowledge/                 # Structured domain knowledge
+│   ├── relationships.json     # Telecom/O-RAN relationships
+│   ├── known_unknowns.json    # Controlled uncertainty handling
+│   └── kb_evidence.json       # Supporting evidence / extracted knowledge
 │
-├── references/               # Curated telecom references
-├── references_auto/          # Auto-processed knowledge sources
-├── tests/                    # Test cases
+├── references/                # Curated telecom references
+├── references_auto/           # Auto-processed knowledge sources
+├── tests/                     # Test cases
 │
-├── scripts/                  # Data processing / pipeline scripts
+├── scripts/                   # Data processing / pipeline scripts
 │   ├── parse_specs.py
 │   └── generate_kb.py
----
 
 ## Setup & Installation
 
