@@ -1,0 +1,184 @@
+[
+  {
+    "id": "interface_a1",
+    "name": "A1",
+    "aliases": ["A1 interface"],
+    "category": "interface",
+    "definition": "Policy guidance and enrichment information transfer interface.",
+    "between": ["Non-RT RIC", "Near-RT RIC"],
+    "purpose": "Transfers policy guidance and enrichment information from Non-RT RIC to Near-RT RIC.",
+    "timing_domain": "Non-real-time (>1 s)",
+    "related_components": ["Non-RT RIC", "Near-RT RIC", "rApp", "xApp"],
+    "related_terms": ["A1 Policy", "Enrichment Information"],
+    "common_confusions": ["E2"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "A1",
+        "text": "Between: Non-RT RIC ↔ Near-RT RIC"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "A1",
+        "text": "Purpose: Policy guidance and enrichment information transfer"
+      }
+    ]
+  },
+  {
+    "id": "interface_e2",
+    "name": "E2",
+    "aliases": ["E2 interface"],
+    "category": "interface",
+    "definition": "Near-real-time monitoring and control interface.",
+    "between": ["Near-RT RIC", "E2 Nodes"],
+    "purpose": "Carries monitoring and control interactions between Near-RT RIC and E2 Nodes.",
+    "timing_domain": "Near-real-time (~10 ms to 1 s)",
+    "related_components": ["Near-RT RIC", "O-CU-CP", "O-CU-UP", "O-DU", "xApp"],
+    "related_terms": ["E2 Node", "E2SM", "KPM", "RC"],
+    "common_confusions": ["A1", "O1"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "E2",
+        "text": "Between: Near-RT RIC ↔ E2 Nodes (O-CU-CP, O-CU-UP, O-DU)"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "E2",
+        "text": "Purpose: Near-real-time monitoring and control"
+      }
+    ]
+  },
+  {
+    "id": "interface_o1",
+    "name": "O1",
+    "aliases": ["O1 interface"],
+    "category": "interface",
+    "definition": "Management, configuration, and telemetry interface for O-RAN network functions.",
+    "between": ["SMO", "O-RAN Network Functions"],
+    "purpose": "Supports management, configuration, telemetry, and FCAPS-style operations.",
+    "timing_domain": "Management / non-real-time",
+    "related_components": ["SMO", "Near-RT RIC", "O-CU-CP", "O-CU-UP", "O-DU"],
+    "related_terms": ["FCAPS"],
+    "common_confusions": ["E2", "O2"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "O1",
+        "text": "Between: SMO ↔ O-RAN Network Functions"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "O1",
+        "text": "Purpose: Management, configuration, and telemetry"
+      }
+    ]
+  },
+  {
+    "id": "interface_o2",
+    "name": "O2",
+    "aliases": ["O2 interface"],
+    "category": "interface",
+    "definition": "Infrastructure and workload lifecycle management interface.",
+    "between": ["SMO", "O-Cloud"],
+    "purpose": "Supports infrastructure management and workload or deployment lifecycle management.",
+    "timing_domain": "Orchestration / lifecycle",
+    "related_components": ["SMO", "O-Cloud"],
+    "related_terms": ["O2ims", "O2dms"],
+    "common_confusions": ["O1", "E2"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "O2",
+        "text": "Between: SMO ↔ O-Cloud"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "O2",
+        "text": "Purpose: Infrastructure and workload lifecycle management"
+      }
+    ]
+  },
+  {
+    "id": "interface_y1",
+    "name": "Y1",
+    "aliases": ["Y1 interface"],
+    "category": "interface",
+    "definition": "RAN analytics exposure interface.",
+    "between": ["Near-RT RIC", "external consumers"],
+    "purpose": "Exposes RAN analytics to internal or external consumers.",
+    "timing_domain": "Analytics / exposure",
+    "related_components": ["Near-RT RIC"],
+    "related_terms": ["RAN Analytics"],
+    "common_confusions": [],
+    "question_types": ["definition"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Y1",
+        "text": "Between: Near-RT RIC ↔ external consumers"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "Y1",
+        "text": "Purpose: Exposure of RAN analytics"
+      }
+    ]
+  },
+  {
+    "id": "interface_r1",
+    "name": "R1",
+    "aliases": ["R1 interface"],
+    "category": "interface",
+    "definition": "Service-based interface for rApps.",
+    "between": ["rApps", "Non-RT RIC / SMO services"],
+    "purpose": "Supports service-based communication for rApps.",
+    "timing_domain": "Service / non-real-time",
+    "related_components": ["rApp", "Non-RT RIC", "SMO"],
+    "related_terms": [],
+    "common_confusions": ["A1"],
+    "question_types": ["definition", "comparison"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "R1",
+        "text": "Between: rApps ↔ Non-RT RIC / SMO services"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "R1",
+        "text": "Purpose: Service-based communication for rApps"
+      }
+    ]
+  },
+  {
+    "id": "interface_open_fronthaul",
+    "name": "Open Fronthaul",
+    "aliases": ["Fronthaul", "Open FH"],
+    "category": "interface",
+    "definition": "Real-time fronthaul interface between O-DU and O-RU.",
+    "between": ["O-DU", "O-RU"],
+    "purpose": "Supports transport of user data, control, and synchronization between O-DU and O-RU.",
+    "timing_domain": "Real-time fronthaul",
+    "related_components": ["O-DU", "O-RU"],
+    "related_terms": ["M-Plane"],
+    "common_confusions": ["E2", "O1"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Open Fronthaul",
+        "text": "Between: O-DU ↔ O-RU"
+      },
+      {
+        "file": "interfaces.md",
+        "section": "Open Fronthaul",
+        "text": "Purpose: Transport of user data, control, and synchronization"
+      }
+    ]
+  }
+]

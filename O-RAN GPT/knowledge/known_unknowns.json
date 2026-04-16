@@ -1,0 +1,41 @@
+{
+  "version": "v1",
+  "description": "Concepts and interfaces intentionally not yet covered by the current local O-RAN knowledge base.",
+  "known_unknowns": [
+    {
+      "term": "F1",
+      "category": "interface",
+      "status": "not_in_current_knowledge_base",
+      "reason": "Not yet modeled in the current O-RAN knowledge base.",
+      "note": "May be added in a future expansion covering broader 3GPP and O-RAN interoperability context."
+    },
+    {
+      "term": "E1",
+      "category": "interface",
+      "status": "not_in_current_knowledge_base",
+      "reason": "Not yet modeled in the current O-RAN knowledge base.",
+      "note": "Reserved for future expansion."
+    },
+    {
+      "term": "Xn",
+      "category": "interface",
+      "status": "not_in_current_knowledge_base",
+      "reason": "Not yet modeled in the current O-RAN knowledge base.",
+      "note": "Reserved for future expansion."
+    },
+    {
+      "term": "X2",
+      "category": "interface",
+      "status": "not_in_current_knowledge_base",
+      "reason": "Not yet modeled in the current O-RAN knowledge base.",
+      "note": "Reserved for future expansion."
+    },
+    {
+      "term": "NG",
+      "category": "interface",
+      "status": "not_in_current_knowledge_base",
+      "reason": "Not yet modeled in the current O-RAN knowledge base.",
+      "note": "Reserved for future expansion."
+    }
+  ]
+}

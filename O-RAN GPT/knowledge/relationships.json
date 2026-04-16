@@ -1,0 +1,604 @@
+[
+  {
+    "id": "rel_001",
+    "from": "SMO",
+    "relation": "hosts",
+    "to": "Non-RT RIC",
+    "category": "hosting",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "SMO",
+        "text": "Hosts: Non-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "rel_002",
+    "from": "Non-RT RIC",
+    "relation": "hosts",
+    "to": "rApp",
+    "category": "hosting",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Non-RT RIC",
+        "text": "Hosts: rApps"
+      }
+    ]
+  },
+  {
+    "id": "rel_003",
+    "from": "Near-RT RIC",
+    "relation": "hosts",
+    "to": "xApp",
+    "category": "hosting",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Hosts: xApps"
+      }
+    ]
+  },
+  {
+    "id": "rel_004",
+    "from": "A1",
+    "relation": "connects",
+    "to": "Non-RT RIC",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "A1",
+        "text": "Between: Non-RT RIC ↔ Near-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "rel_005",
+    "from": "A1",
+    "relation": "connects",
+    "to": "Near-RT RIC",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "A1",
+        "text": "Between: Non-RT RIC ↔ Near-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "rel_006",
+    "from": "E2",
+    "relation": "connects",
+    "to": "Near-RT RIC",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "E2",
+        "text": "Between: Near-RT RIC ↔ E2 Nodes (O-CU-CP, O-CU-UP, O-DU)"
+      }
+    ]
+  },
+  {
+    "id": "rel_007",
+    "from": "E2",
+    "relation": "connects",
+    "to": "E2 Node",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "E2 Node",
+        "text": "Definition: Logical node connected to Near-RT RIC via E2 interface"
+      }
+    ]
+  },
+  {
+    "id": "rel_008",
+    "from": "O1",
+    "relation": "connects",
+    "to": "SMO",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "O1",
+        "text": "Between: SMO ↔ O-RAN Network Functions"
+      }
+    ]
+  },
+  {
+    "id": "rel_009",
+    "from": "O1",
+    "relation": "connects",
+    "to": "O-RAN Network Function",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "O-RAN NF",
+        "text": "Definition: O-RAN Network Function"
+      }
+    ]
+  },
+  {
+    "id": "rel_010",
+    "from": "O2",
+    "relation": "connects",
+    "to": "SMO",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "O2",
+        "text": "Between: SMO ↔ O-Cloud"
+      }
+    ]
+  },
+  {
+    "id": "rel_011",
+    "from": "O2",
+    "relation": "connects",
+    "to": "O-Cloud",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "O2",
+        "text": "Between: SMO ↔ O-Cloud"
+      }
+    ]
+  },
+  {
+    "id": "rel_012",
+    "from": "Y1",
+    "relation": "connects",
+    "to": "Near-RT RIC",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Y1",
+        "text": "Between: Near-RT RIC ↔ external consumers"
+      }
+    ]
+  },
+  {
+    "id": "rel_013",
+    "from": "Y1",
+    "relation": "connects",
+    "to": "external consumers",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Y1",
+        "text": "Between: Near-RT RIC ↔ external consumers"
+      }
+    ]
+  },
+  {
+    "id": "rel_014",
+    "from": "R1",
+    "relation": "connects",
+    "to": "rApp",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "R1",
+        "text": "Between: rApps ↔ Non-RT RIC / SMO services"
+      }
+    ]
+  },
+  {
+    "id": "rel_015",
+    "from": "R1",
+    "relation": "connects",
+    "to": "Non-RT RIC",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "R1",
+        "text": "Between: rApps ↔ Non-RT RIC / SMO services"
+      }
+    ]
+  },
+  {
+    "id": "rel_016",
+    "from": "Open Fronthaul",
+    "relation": "connects",
+    "to": "O-DU",
+    "target_role": "endpoint_1",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Open Fronthaul",
+        "text": "Between: O-DU ↔ O-RU"
+      }
+    ]
+  },
+  {
+    "id": "rel_017",
+    "from": "Open Fronthaul",
+    "relation": "connects",
+    "to": "O-RU",
+    "target_role": "endpoint_2",
+    "category": "interface",
+    "evidence": [
+      {
+        "file": "interfaces.md",
+        "section": "Open Fronthaul",
+        "text": "Between: O-DU ↔ O-RU"
+      }
+    ]
+  },
+  {
+    "id": "rel_018",
+    "from": "xApp",
+    "relation": "runs_on",
+    "to": "Near-RT RIC",
+    "category": "deployment",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "xApp",
+        "text": "Runs on: Near-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "rel_019",
+    "from": "rApp",
+    "relation": "runs_on",
+    "to": "Non-RT RIC",
+    "category": "deployment",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "rApp",
+        "text": "Runs on: Non-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "rel_020",
+    "from": "Near-RT RIC",
+    "relation": "uses_interface",
+    "to": "E2",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Key interfaces: E2, A1, O1, Y1"
+      }
+    ]
+  },
+  {
+    "id": "rel_021",
+    "from": "Near-RT RIC",
+    "relation": "uses_interface",
+    "to": "A1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Key interfaces: E2, A1, O1, Y1"
+      }
+    ]
+  },
+  {
+    "id": "rel_022",
+    "from": "Near-RT RIC",
+    "relation": "uses_interface",
+    "to": "O1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Key interfaces: E2, A1, O1, Y1"
+      }
+    ]
+  },
+  {
+    "id": "rel_023",
+    "from": "Near-RT RIC",
+    "relation": "uses_interface",
+    "to": "Y1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Key interfaces: E2, A1, O1, Y1"
+      }
+    ]
+  },
+  {
+    "id": "rel_024",
+    "from": "Non-RT RIC",
+    "relation": "uses_interface",
+    "to": "A1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Non-RT RIC",
+        "text": "Key interfaces: A1, R1"
+      }
+    ]
+  },
+  {
+    "id": "rel_025",
+    "from": "Non-RT RIC",
+    "relation": "uses_interface",
+    "to": "R1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Non-RT RIC",
+        "text": "Key interfaces: A1, R1"
+      }
+    ]
+  },
+  {
+    "id": "rel_026",
+    "from": "SMO",
+    "relation": "uses_interface",
+    "to": "O1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "SMO",
+        "text": "Key interfaces: O1, O2"
+      }
+    ]
+  },
+  {
+    "id": "rel_027",
+    "from": "SMO",
+    "relation": "uses_interface",
+    "to": "O2",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "SMO",
+        "text": "Key interfaces: O1, O2"
+      }
+    ]
+  },
+  {
+    "id": "rel_028",
+    "from": "O-DU",
+    "relation": "uses_interface",
+    "to": "E2",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-DU",
+        "text": "Key interfaces: E2, O1, Open Fronthaul"
+      }
+    ]
+  },
+  {
+    "id": "rel_029",
+    "from": "O-DU",
+    "relation": "uses_interface",
+    "to": "O1",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-DU",
+        "text": "Key interfaces: E2, O1, Open Fronthaul"
+      }
+    ]
+  },
+  {
+    "id": "rel_030",
+    "from": "O-DU",
+    "relation": "uses_interface",
+    "to": "Open Fronthaul",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-DU",
+        "text": "Key interfaces: E2, O1, Open Fronthaul"
+      }
+    ]
+  },
+  {
+    "id": "rel_031",
+    "from": "O-RU",
+    "relation": "uses_interface",
+    "to": "Open Fronthaul",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-RU",
+        "text": "Key interfaces: Open Fronthaul"
+      }
+    ]
+  },
+  {
+    "id": "rel_032",
+    "from": "O-Cloud",
+    "relation": "uses_interface",
+    "to": "O2",
+    "category": "usage",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-Cloud",
+        "text": "Key interfaces: O2"
+      }
+    ]
+  },
+  {
+    "id": "rel_033",
+    "from": "A1",
+    "relation": "supports",
+    "to": "A1 Policy",
+    "category": "semantic",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "A1 Policy",
+        "text": "Definition: Policy sent from Non-RT RIC to Near-RT RIC via A1 interface"
+      }
+    ]
+  },
+  {
+    "id": "rel_034",
+    "from": "A1",
+    "relation": "supports",
+    "to": "Enrichment Information",
+    "category": "semantic",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "Enrichment Information",
+        "text": "Definition: Contextual data sent via A1 interface"
+      }
+    ]
+  },
+  {
+    "id": "rel_035",
+    "from": "E2",
+    "relation": "uses_model",
+    "to": "E2 Service Model (E2SM)",
+    "category": "semantic",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "E2 Service Model (E2SM)",
+        "text": "Definition: Data model used over E2 interface"
+      }
+    ]
+  },
+  {
+    "id": "rel_036",
+    "from": "Near-RT RIC",
+    "relation": "controls",
+    "to": "E2 Node",
+    "category": "control",
+    "evidence": [
+      {
+        "file": "glossary.md",
+        "section": "E2 Node",
+        "text": "Definition: Logical node connected to Near-RT RIC via E2 interface"
+      }
+    ]
+  },
+  {
+    "id": "rel_037",
+    "from": "xApp",
+    "relation": "controls_via",
+    "to": "E2",
+    "category": "control",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "xApp",
+        "text": "Role: Near-real-time optimization and control application"
+      }
+    ]
+  },
+  {
+    "id": "rel_038",
+    "from": "rApp",
+    "relation": "guides_via",
+    "to": "A1",
+    "category": "control",
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "rApp",
+        "text": "Role: Non-real-time optimization, policy, and ML application"
+      }
+    ]
+  },
+  {
+    "id": "rel_039",
+    "from": "Non-RT RIC",
+    "relation": "operates_in",
+    "to": "Non-RT loop",
+    "category": "timing",
+    "evidence": [
+      {
+        "file": "architecture.md",
+        "section": "Control Loop Architecture",
+        "text": "Non-RT Loop (>1s)"
+      }
+    ]
+  },
+  {
+    "id": "rel_040",
+    "from": "Near-RT RIC",
+    "relation": "operates_in",
+    "to": "Near-RT loop",
+    "category": "timing",
+    "evidence": [
+      {
+        "file": "architecture.md",
+        "section": "Control Loop Architecture",
+        "text": "Near-RT Loop (~10ms–1s)"
+      }
+    ]
+  },
+  {
+    "id": "rel_041",
+    "from": "O-DU",
+    "relation": "operates_in",
+    "to": "Real-time loop",
+    "category": "timing",
+    "evidence": [
+      {
+        "file": "architecture.md",
+        "section": "Control Loop Architecture",
+        "text": "Real-Time Loop (<10ms)"
+      }
+    ]
+  },
+  {
+    "id": "rel_042",
+    "from": "O-RU",
+    "relation": "operates_in",
+    "to": "Real-time loop",
+    "category": "timing",
+    "evidence": [
+      {
+        "file": "architecture.md",
+        "section": "Control Loop Architecture",
+        "text": "Real-Time Loop (<10ms)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1248 @@
+{
+  "interfaces": {
+    "A1": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "A1: Interface between Non-RT RIC and Near-RT RIC to enable policy-driven guidance of Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "study potential impact and required enhancements to O-RAN interfaces E2, O1, A1, FH M-plane, FH CUS-Plane,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG2 (Non-RT RIC, A1, R1) Impact"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG2 (Non-RT RIC, A1) Impact"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "No impact on A1 interface is identified"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG2 (Non-RT RIC, R1, A1) Impact"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "A1 Interface"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "NON -> NEAR : <<A1>>Enrichment information (UE position)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Support communication of policies and enrichment information to Near-RT RIC over A1 interface."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Retrieve enrichment information from Non-NT RIC over A1 interface."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "from non-RT RIC. Enrichment data is provided from non-RT RIC via A1, and measurements (such as SINR) and SRS"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "non --> near : <<A1>> Enrichment data (location/mobility)"
+        }
+      ]
+    },
+    "E2": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "over E2 interface."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-eNB (O-RAN eNB): an eNB or ng-eNB that supports E2 interface."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2: Interface connecting the Near-RT RIC and one or more O-CU-CPs, one or more O-CU-UPs, and one or more O-DUs."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2 Node: a logical node terminating E2 interface. In this version of the specification, ORAN nodes terminating E2"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "application is independent of the Near-RT RIC and may be provided by any third party. The E2 enables a direct association"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "study potential impact and required enhancements to O-RAN interfaces E2, O1, A1, FH M-plane, FH CUS-Plane,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "over the relevant interface, e.g., O1, E2."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "benefits versus complexity taking into consideration E2 load and latency requirements for RIC and E2"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "box \"E2 Nodes\" #lightpink"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "2) From E2 Nodes (O-CUs and O-DUs):"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1/E2"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Configuration data towards E2 Nodes:"
+        }
+      ]
+    },
+    "O1": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1: Interface between orchestration & management entities (Orchestration/NMS) and O-RAN managed elements, for"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "study potential impact and required enhancements to O-RAN interfaces E2, O1, A1, FH M-plane, FH CUS-Plane,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "over the relevant interface, e.g., O1, E2."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "ODU -> SMO : <<O1>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "OCU -> SMO : <<O1>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "alt via O1"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> ODU: <<O1>> File ready notification to inform about file with new GoB"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "ODU -> SMO: <<O1>> File-download request"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> ODU: <<O1>> Accepted"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> ODU: <<O1>> Notification about successful file-download"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> ODU: <<O1>> Notification about new GoB configuration file"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> ODU: <<O1>> Default/Fallback mMIMO configuration"
+        }
+      ]
+    },
+    "O2": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Transfer the appropriate bMRO ML model to the Near-RT RIC over O1/O2."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "for the purpose of training of relevant AI/ML models. Retrieve ML Models from the Non-RT RIC over O1/O2."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "N modes (or simply to predict the best mode) and deploys the trained models in xApp to near-RT RIC (over O1 or O2 –"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "non -> near: <<O1>> or <<O2>> Deploy AI/ML models"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "non -> near: <<O1>> or <<O2>> Update AI/ML models"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "(e.g. O1, O2, A1, E2, O-FH) in terms of required input data and output configuration data."
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "parameters/KPIs. O-Cloud shall be able to report EE through O2 interface to the SMO or through"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "Cloud shall be able to report energy efficiency through O2 interface to the SMO or through NBI to"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "NRTRIC -> RTRIC : <<O1>> or <<O2>> Deploy AI/ML model"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "c) (Optionally) Deploy, update, configure EE/ES AI/ML models, in Near-RT RIC via O1/O2 interface."
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "b) (Optionally) Receive EE/ES AI/ML model for deployment via O1 or O2 interface."
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "O2 Interface."
+        }
+      ]
+    },
+    "Y1": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "O-RAN.WG3.TS.Y1GAP: \"O-RAN Y1 interface: General Aspects and Principles\" (\"Y1GAP\")."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Near-RT RIC platform: Platform supporting A1, E2, Y1 and O1 interfaces and providing a set of services via Near-RT RIC APIs needed for xApp functionality."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Y1: An interface over which RAN analytics services are exposed by the Near-RT RIC to be consumed by Y1 consumers."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Y1 consumers: A role played by entities within or outside of the PLMN trust domain that consumes the Y1 services produced by the Near-RT RIC."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The Near-RT RIC O-RAN NF in figure below provides RAN analytics information services via the Y1 service interface as specified in Y1GAP [39]. These services can be consumed by Y1 consumers after mutual authentication and authorization by subscribing to or requesting the RAN analytics information via the Y1 service interface. Y1 consumers role can be played by entities which are within an PLMN trusted domain. Y1 consumers outside the PLMN trusted domain may use Y1 services in a secure manner via an exposure function, e.g., as in 3GPP TS 23.501 [1], clause 5.20. The framework for mutual authentication and authorization between Y1 consumers and the Near-RT RIC is not supported in the present document."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Within the logical architecture of O-RAN, as shown in Figure 5.1-2 below, the radio side includes Near-RT RIC, O-CU-CP, O-CU-UP, O-DU, and O-RU O-RAN NFs. The E2 interface connects O-eNB to Near-RT RIC. Although not shown in this figure, the O-eNB does support O-DU and O-RU O-RAN NFs with an Open Fronthaul interface between them. The Near-RT RIC, in the figure below, supports the Y1 service interface towards Y1 consumers. Y1 consumers, unlike the other network elements shown in this figure, does not denote a logical O-RAN function."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Near-RT RIC is an O-RAN NF that enables near real-time control and optimization of services and resources of E2 Nodes via fine-grained data collection and actions over the E2 interface with control loops in the order of 10 ms-1s. The Near-RT RIC hosts one or more xApps that use E2 interface to collect near real-time information (e.g., on a UE basis or a Cell basis) and provide value added services. The Near-RT RIC control over the E2 Nodes is steered via the policies and the enrichment data provided via A1 from the Non-RT RIC. Based on the available data, the Near-RT RIC generates the RAN analytics information and exposes it via Y1 interface."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Y1 interface"
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Y1 service interface as specified in Y1GAP [39] allows the Y1 consumers to subscribe or request the RAN analytics information provided by Near-RT RIC."
+        }
+      ]
+    },
+    "R1": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "R1 and Near-RT RIC API,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> rAPP: <<R1>> Update Model Request"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> rAPP: <<R1>> Data Retrieval"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rAPP -> SMO: <<R1>> Optimal mMIMO GoB Configuration"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO --> rAPP : <<R1>> Model retraining and update"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG2 (Non-RT RIC, A1, R1) Impact"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RAN.WG2.R1.GAP-v01.00.00:"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> NRTRIC : <<R1>> Model Deployment"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> NRTRIC : <<R1>> Model Data"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": ": <<R1>> PI Degradation & Alarms"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": ": <<R1>> Model Data"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": ": <<R1>> Updated Optimal Configs"
+        }
+      ]
+    },
+    "Open Fronthaul": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "study potential impact and required enhancements to O-RAN interfaces E2, O1, A1, FH M-plane, FH CUS-Plane,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "via Open FH M-Plane reading o-ran-beamforming YANG module."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "via Open FH M-Plane transferring proprietary beamforming configuration file"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "M-Plane"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Transfer file including optimized mMIMO GoB parameters via O1 (to O-DU) or Open FH M-Plane (to O-RU)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Apply GoB configuration received from the SMO over O1 or received from O-RU over Open FH M-Plane."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Apply GoB configuration received from the SMO or from the O-DU over Open FH M-Plane."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Predefined beams (uploaded via M-Plane) can be used if update is supported by O-RU"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "specified in 3GPP and moderate if specified in O-RAN. The Open Fronthaul specification already supports file-based"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "upload and download of GoB beam pattern on O-FH M-Plane as well as dynamic beamforming on O-FH CUS-Plane."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "This use case focuses on O1, M-Plane (via SMO) interfaces for observations, measurements, KPIs collection. O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1 interface and M-plane interfaces are used."
+        }
+      ]
+    }
+  },
+  "components": {
+    "SMO": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO: Service Management and Orchestration system."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Service Management and Orchestration"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Participant \"SMO & Non-RT RIC\" as SMO"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "activate SMO"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "ODU -> SMO : <<O1>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "OCU -> SMO : <<O1>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "APP -> SMO : <<EI>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO --> rAPP: Data Retrieval"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RP --> SMO: Optimization Trigger/Target"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO --> SMO: Performance Degradation"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> rAPP: <<R1>> Update Model Request"
+        }
+      ]
+    },
+    "Non-RT RIC": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Non-RT RIC (O-RAN non-real-time RAN Intelligent Controller): a logical function that enables non-real-time control"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "A1: Interface between Non-RT RIC and Near-RT RIC to enable policy-driven guidance of Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rApp: An application designed to run on the Non-RT RIC. Such modular application leverages the functionality exposed"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "by the Non-RT RIC to provide added value services relative to intelligent RAN optimization and operation"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Non-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Non-real-time RAN Intelligent Controller"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "identify the any possible impact on Non-RT RIC architecture, Near-RT RIC architecture and AI/ML workflow."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Option 1: Non-RT RIC Deployment"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The Non-RT RIC hosts an rApp application whose task is to determine the suitable GoB configuration for a cell or a"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Participant \"SMO & Non-RT RIC\" as SMO"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "DU and O-CU), triggered by Non-RT RIC or rApp if required."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG2 (Non-RT RIC, A1, R1) Impact"
+        }
+      ]
+    },
+    "Near-RT RIC": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "based guidance of applications/features in Near-RT RIC."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-RT RIC (O-RAN near-real-time RAN Intelligent Controller): a logical function that enables near-real-time control"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "A1: Interface between Non-RT RIC and Near-RT RIC to enable policy-driven guidance of Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2: Interface connecting the Near-RT RIC and one or more O-CU-CPs, one or more O-CU-UPs, and one or more O-DUs."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "xApp: An application designed to run on the Near-RT RIC. Such an application is likely to consist of one or more"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "application is independent of the Near-RT RIC and may be provided by any third party. The E2 enables a direct association"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RAN requirements to host the relevant O-RAN functions (such as Near-RT RIC, O-CU-CP, O-CU-UP, and O-DU), the"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-real-time RAN Intelligent Controller"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "R1 and Near-RT RIC API,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "identify the any possible impact on Non-RT RIC architecture, Near-RT RIC architecture and AI/ML workflow."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The Near-RT RIC may host an xApp to optimize inter-cell beam mobility such as bMRO. In this case the Near-RT RIC"
+        }
+      ]
+    },
+    "O-CU-CP": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-CU-CP: O-RAN Central Unit – Control Plane: a logical node hosting the RRC and the control plane part of the PDCP"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "for NR access: O-CU-CP, O-CU-UP, O-DU or any combination"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RAN requirements to host the relevant O-RAN functions (such as Near-RT RIC, O-CU-CP, O-CU-UP, and O-DU), the"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "from O-CU-CP/O-CU-UP to SMO and vice versa."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The E2 Node (O-CU-CP) shall host the RAN Function “KPM Monitor”"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "a) O-RAN.WG5 - SMO - O-CU (O-RAN O1 Interface specification for O-CU-UP and O-CU-CP & O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1 Interface for O-CU-UP and O-CU-CP - YANG Models) ; SMO - O-DU (O-RAN O1 Interface"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "m) O-RAN.WG5 - SMO - O-CU (O-RAN O1 Interface specification for O-CU-UP and O-CU-CP & O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1 Interface for O-CU-UP and O-CU-CP - YANG Models); SMO - O-DU (O-RAN O1 Interface"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-CU-CP and O-CU-UP follow 3GPP SA5 data models and YANG modules as specified in 3GPP"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The SMO configuration of O-CU-CP and O-CU-UP is based on 3GPP SA5 data models and YANG"
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "A.4 Near-RT RIC, O-CU-CP, O-CU-UP, O-DU, and O-RU 29"
+        }
+      ]
+    },
+    "O-CU-UP": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-CU-UP: O-RAN Central Unit – User Plane: a logical node hosting the user plane part of the PDCP protocol and the"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "for NR access: O-CU-CP, O-CU-UP, O-DU or any combination"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RAN requirements to host the relevant O-RAN functions (such as Near-RT RIC, O-CU-CP, O-CU-UP, and O-DU), the"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "from O-CU-CP/O-CU-UP to SMO and vice versa."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "a) O-RAN.WG5 - SMO - O-CU (O-RAN O1 Interface specification for O-CU-UP and O-CU-CP & O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1 Interface for O-CU-UP and O-CU-CP - YANG Models) ; SMO - O-DU (O-RAN O1 Interface"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "m) O-RAN.WG5 - SMO - O-CU (O-RAN O1 Interface specification for O-CU-UP and O-CU-CP & O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O1 Interface for O-CU-UP and O-CU-CP - YANG Models); SMO - O-DU (O-RAN O1 Interface"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-CU-CP and O-CU-UP follow 3GPP SA5 data models and YANG modules as specified in 3GPP"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The SMO configuration of O-CU-CP and O-CU-UP is based on 3GPP SA5 data models and YANG"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "delivered from O-CU-UP to O-"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "delivered to O-CU-UP from O-"
+        }
+      ]
+    },
+    "O-DU": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-DU: O-RAN Distributed Unit: a logical node hosting RLC/MAC/High-PHY layers based on a lower layer functional"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "for NR access: O-CU-CP, O-CU-UP, O-DU or any combination"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RAN requirements to host the relevant O-RAN functions (such as Near-RT RIC, O-CU-CP, O-CU-UP, and O-DU), the"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-DU → SMO"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Towards O-DU"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RU; O-DU →"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-DU → O-"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Transfer file including optimized mMIMO GoB parameters via O1 (to O-DU) or Open FH M-Plane (to O-RU)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Apply GoB configuration received from the SMO or from the O-DU over Open FH M-Plane."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-RT RIC and O-DU control loops."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-DU → Non-"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-DU"
+        }
+      ]
+    },
+    "O-RU": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RU: O-RAN Radio Unit: a logical node hosting Low-PHY layer and RF processing based on a lower layer functional"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "beam failure statistics. The rApp knows O-RU specifics such as antenna array parameters, O-RU capabilities, beam file"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Towards O-RU"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RU → O-"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RU"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Transfer file including optimized mMIMO GoB parameters via O1 (to O-DU) or Open FH M-Plane (to O-RU)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Apply GoB configuration received from the SMO over O1 or received from O-RU over Open FH M-Plane."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Predefined beams (uploaded via M-Plane) can be used if update is supported by O-RU"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Nodes (O-DUs, O-CUs), O-RU, SMO}. Optimizer capability can be extended to derive configurations other reference"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2NODES -> ORUs : <<FH>> Updated O-RU Configurations"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RU → Non-"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "from O-RU per cell"
+        }
+      ]
+    },
+    "O-Cloud": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-Cloud: O-Cloud is a cloud computing platform comprising a collection of physical infrastructure nodes that meet O-"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "O-Cloud Resource Energy Saving Mode"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "O-CU/O-DU Hardware & Software / O-Cloud Software & Platform KPIs"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "capability to measure and report power consumption values to the O-Cloud. The O-Cloud software"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "parameters/KPIs. O-Cloud shall be able to report EE through O2 interface to the SMO or through"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "The O-Cloud software shall be able to provide PEE parameters/KPIs at the workload level (e.g., pod,"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "O-CU/O-DU CNF, etc.), as well as for the O-Cloud platform software components themselves. O-"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "architecture, there is a strong need to have solution(s) for energy saving in the O-Cloud. The O-Cloud"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "Resource Energy Saving Mode use case should cover various components of the O-Cloud such as"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "The aim of this use case is to enable energy savings in the O-Cloud by reducing the power consumption of"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "various O-Cloud components without impairing the network performance. Given the network status, the O-"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "frequency, etc. By using multi-dimensional data (e.g., traffic load data at E2 Nodes, load over O-Cloud in"
+        }
+      ]
+    },
+    "xApp": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "xApp: An application designed to run on the Near-RT RIC. Such an application is likely to consist of one or more"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "between the xApp and the RAN functionality."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The Near-RT RIC may host an xApp to optimize inter-cell beam mobility such as bMRO. In this case the Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "bMRO is an xApp running in the Near-RT RIC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "bMRO xApp uses the E2 interface to a) get KPI/PM reports from the E2 Node and b) configure"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "RAN specified O1 interface is used for trained AI/ML model deployment as xAPP in Near-Real Time RIC. Inference is"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "CSI-RS and DMRS configuration optimization is an xAPP running in the Near-Real Time"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-Real Time RIC framework handles xAPP LCM."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "For CSI-RS and DMRS optimizations, trained AI/ML model is deployed as xAPP which will"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "xAPP uses Near-Real Time RIC services and E2 interfaces to a) get measurements,"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Offline trained AI/ML model is deployed as xAPP which uses Near-Real Time RIC services"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "DMRS/CSI-RS optimization xAPP uses E2 interface to a) get measurements, observations,"
+        }
+      ]
+    },
+    "rApp": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rApp: An application designed to run on the Non-RT RIC. Such modular application leverages the functionality exposed"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The Non-RT RIC hosts an rApp application whose task is to determine the suitable GoB configuration for a cell or a"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "beam failure statistics. The rApp knows O-RU specifics such as antenna array parameters, O-RU capabilities, beam file"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Participant \"rApps\" as rAPP"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "activate rAPP"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO --> rAPP: Data Retrieval"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rAPP --> rAPP: AI/ML model training"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> rAPP: <<R1>> Update Model Request"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO -> rAPP: <<R1>> Data Retrieval"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rAPP --> rAPP: AI/ML model inference"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rAPP -> SMO: <<R1>> Optimal mMIMO GoB Configuration"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "SMO --> rAPP : <<R1>> Model retraining and update"
+        }
+      ]
+    }
+  },
+  "glossary": {
+    "E2 Node": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2 Node: a logical node terminating E2 interface. In this version of the specification, ORAN nodes terminating E2"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "get KPI/PM reports from the E2 Node and b) configure beam-based cell individual offsets as"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "policy in the E2 Node."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "bMRO xApp uses the E2 interface to a) get KPI/PM reports from the E2 Node and b) configure"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "beam-based cell individual offsets as policy in the E2 Node."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "level/E2 Node level Control (i.e. E2SM-CC)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The E2 Node (O-CU-CP) shall host the RAN Function “KPM Monitor”"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "The computational complexity as well as the signalling overhead (reporting from the E2 Node (O-CU) as well as"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "configuration towards the E2 Node (O-CU)) increases as follows:"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Options 1b, 2b: E2 Node (O-CU) based AI/ML inference (Optimization of SS Burst"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "inference in the E2 Node. More specifically, the alternative architecture for SS Burst Set configuration optimization"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "hosts ML training in the Non-Real Time RIC and inference in the E2 Node (O-CU) (Option 1b in Figure 3.4.2.3-1."
+        }
+      ]
+    },
+    "A1 Policy": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "NRTRIC -> RTRIC : <<A1>> A1 Policy"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "d) Provide optimization trigger, optimization targets, and A1 policies (e.g., change of Tx/Rx Array"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": " A1 Policy for ES optimization"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "corresponding A1 policies/updates of O1 and O2-"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "A1 policies/updates of O1 and O2-related services"
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The A1 interface, which provides A1 policy management, A1 enrichment information and A1 ML model management between SMO and the Near-RT RIC to support RAN optimization."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "A1 policies have the following characteristics compared to persistent configuration as specified in A1GAP [18] and Use Cases Detailed Specification [38]. A1 policies,"
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "Support for management of A1 policies, including discovery of A1 policies and A1 policy types available in Near-RT RICs, as well as creation, querying, updating, and deletion of A1 policies, querying the enforcement status of A1 policies, and subscribing for event notifications related to A1 policies and A1 policy types."
+        }
+      ]
+    },
+    "Enrichment Information": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "APP -> SMO : <<EI>> Data Collection"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "nodes and enrichment information (e.g., UE geolocation information) from external application/server, if required, to"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "group Opt: Enrichment Information Collection (for training)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "CC -> AS : Request enrichment information"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "AS -> CC : Enrichment information collection (UE position)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "group Opt:Enrichment Information Collection (for inference)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "NON -> NEAR : <<A1>>Enrichment information (UE position)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Non-RT-RIC obtains other enrichment information (such as UE position and velocity) from an application server"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "UE, based on the UE’s historical beam measurement reports, as well as other possible enrichment information."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Enrichment information from application server"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Collect necessary KPIs, measurement reports and enrichment information (e.g., UE position) from E2 nodes"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Retrieve necessary KPIs, measurement reports and enrichment information (e.g., UE position) from SMO for"
+        }
+      ]
+    },
+    "Control Loop": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Analyze and evaluate input/output parameters of the algorithm, the impact of the control loop delay on"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "procedure and/or trigger the rAPP model retraining and re-optimization. Execute the inference/control loop"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "and reconfiguration periods or even different input data over E2 for faster Near-RT RIC control loops are not"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Execute the control loop periodically or event-triggered."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Set configuration optimization which operates in slowest control loop (Non-RT RIC Control Loop) of the O-RAN"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Near-RT RIC and O-DU control loops."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Control loop supported"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "rAPP (>=1sec) and Near-RT RIC (< 1sec) control loops efficiently with appropriate selection of training data sets size"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2 interface and/or E2-nodes/RIC processing time because the solution does not rely on very fast control loop."
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "Non-RT RIC continues closed-loop monitoring of Energy Saving function"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "Near-RT RIC continues closed-loop monitoring of Energy Saving"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "Non-RT RIC continues closed loop monitoring of Energy Saving"
+        }
+      ]
+    },
+    "Service Model": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RAN.WG3.E2SM-RC-v01.01.00 or NEW: O-RAN.WG3.E2SM-CC"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2SM-RC (modify E2SM-RC to support cell specific signaling) or add this policy to a new Cell"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "level/E2 Node level Control (i.e. E2SM-CC)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RAN.WG3.E2SM-KPM-v02.00"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Work in O-RAN WGs can be minimized by referring to 3GPP specification as done today, e.g., E2SM-KPM, O"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "k) O-RAN.WG3- Near-Real-time RAN Intelligent Controller E2 Service Model (KPM)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RAN.WG3- Near-Real-time RAN Intelligent Controller E2 Service Model (Common, EC, NI)"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "Identify definition of new E2SMs and required information models that may be required by for DM-"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "WG3.E2SM."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "E2SM-KPM, O RAN.WG5.O-CU-O1, O-RAN.WG10.O1."
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "O-RAN.WG3.E2SM-KPM"
+        },
+        {
+          "source": "O-RAN.WG1.mMIMO-Use-Cases-TR-v01.00.pdf",
+          "text": "in 3GPP, the impact will be minor (noting that E2SM-KPM has already extended the"
+        }
+      ]
+    },
+    "Managed Function": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Managed Function: The definition of a Managed Function (MF) is given in 3GPP TS 28.622 [2], clause 4.3.4."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "MF Managed Function"
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The UE to eNB/gNB interface in 3GPP is denoted as the Uu interface. The Uu is a complete protocol stack from L1 to L3 and as such, seen as a whole, it terminates in the NG-RAN. If the NG-RAN is decomposed, different protocols terminate at different reference points and none of them has been defined by O-RAN. Since the Uu messages still flow from the UE to the intended eNB/gNB managed function, it is not shown in the O-RAN architecture as a separate interface to a specific managed function. For more information on the Uu interface between the UE and the NG-RAN, please refer to clauses 5.2 and 5.3 of 3GPP TS 38.401 [10]."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Aggregation of O-RAN NFs is supported by the O-RAN specified interfaces O1 and E2. For the O1 interface, the aggregated O-RAN NFs will be managed as separate Managed Functions belonging to a single Managed Element as specified in OAM Architecture [34]. For the E2 interface the aggregated O-RAN NFs can be exposed as part of the E2 Service Model towards the Near-RT RIC (see Annex A in E2GAP [22])."
+        }
+      ]
+    },
+    "O-RAN NF": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Near-Real-Time RAN Intelligent Controller: An O-RAN Network Function (NF) comprised of the Near-RT RIC platform and Near-RT RIC Applications (xApps)."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "O-RAN Network Function: A network function with O-RAN defined behaviors and interfaces, which can also inherit and/or extend defined behaviors and interfaces of a Network Function defined in 3GPP TS 23.501 [1]."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "O-RAN node: Same as an O-RAN NF."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "NOTE: Therefore, the terms O-RAN NFs as well as O-RAN nodes are used interchangeably to refer to some of the logical O-RAN entities, according to the context used in that particular statement. In any case, they always refer to a logical entity and not to a physical or cloudified instantiation of an O-RAN NF or an O-RAN node."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The Near-RT RIC O-RAN NF in figure below provides RAN analytics information services via the Y1 service interface as specified in Y1GAP [39]. These services can be consumed by Y1 consumers after mutual authentication and authorization by subscribing to or requesting the RAN analytics information via the Y1 service interface. Y1 consumers role can be played by entities which are within an PLMN trusted domain. Y1 consumers outside the PLMN trusted domain may use Y1 services in a secure manner via an exposure function, e.g., as in 3GPP TS 23.501 [1], clause 5.20. The framework for mutual authentication and authorization between Y1 consumers and the Near-RT RIC is not supported in the present document."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The O1 interface, which provides SMO FCAPS support either directly or indirectly between the SMO and the O-RAN Network Functions."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "Near-RT RIC is an O-RAN NF that enables near real-time control and optimization of services and resources of E2 Nodes via fine-grained data collection and actions over the E2 interface with control loops in the order of 10 ms-1s. The Near-RT RIC hosts one or more xApps that use E2 interface to collect near real-time information (e.g., on a UE basis or a Cell basis) and provide value added services. The Near-RT RIC control over the E2 Nodes is steered via the policies and the enrichment data provided via A1 from the Non-RT RIC. Based on the available data, the Near-RT RIC generates the RAN analytics information and exposes it via Y1 interface."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The O-DU is an O-RAN NF in the O-RAN Architecture. An O-DU, combined with one or more O-RU(s) connected to it, supports and is fully compatible with the functions of a gNB-DU as defined by 3GPP TS 38.401 [10]."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "A1 is the interface between the Non-RT RIC in SMO and the Near-RT RIC function O-RAN NF. A1 interface supports three types of services as defined in A1GAP [18]:"
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "To support intelligent RAN optimization, the Non-RT RIC with rApps and Near-RT RIC with xApps utilize the knowledge of different UE associated events reported by the O-RAN NFs (excluding O-RU) over E2 and O1 interfaces. Both the Non-RT RIC and Near-RT RIC may need to correlate different UE associated events reported by the O-RAN functions for the same UE. In order to facilitate this correlation task, the reporting O-RAN NF includes a set of UE associated identifiers with any report containing UE specific information."
+        },
+        {
+          "source": "O-RAN.WG1.TS.OAD-R005-v16.00.docx",
+          "text": "The Table 5.5-1 below shows the set of UE associated identifiers to be reported by any O-RAN NF (excluding O-RU) over O1 and E2 interfaces for any UE associated information."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "Based on the infrastructure requirements of the O-RAN NF Deployments, it orchestrates the necessary management actions to the O-Cloud infrastructure, by coordinating with FOCOM SMOS producer for the needed O-Cloud management requests."
+        }
+      ]
+    },
+    "Intent": {
+      "matches": [
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "d) Provide optimization trigger, optimization targets and intent-based policies (e.g., set energy target to"
+        },
+        {
+          "source": "O-RAN.WG1.Network-Energy-Savings-Technical-Report-R003-v02.00.pdf",
+          "text": "NRTRIC --> RTRIC : <<A1>> Intent based Policy"
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "[i.2] 3GPP TS 28.312: “Intent driven management services for mobile networks”"
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "[i.3] TMF921: \"Intent Management API User Guide v5.0.0\""
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "Intent: formal specification of all requirements including goals and constraints given to a system."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "RAN management intent owner: An authorized SMO service consumer, responsible for formulating the RAN management Intents as per its own goals and requirements and consuming intent-based services."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "RAN management intent handler: An authorized SMO service producer which understands, can process and ensure fulfilment of RAN management Intents."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "RMIO RAN management intent owner"
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "RMIH RAN management intent handler"
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "Intents describe desired objectives for RAN management (goals, requirements, and constraints) without specifying how to achieve them. In SMO, intent-driven RAN management services can be made accessible to authorized consumers. SMO intent capabilities are exposed by associated SMOS producers and by rApps."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "RMIO and RMIH refer to two distinct roles in intent-driven RAN management. An RMIO has objectives it needs the RAN network to meet. It is using intent to express these objectives and provide them to the respective service producers. Therefore, RMIOs are the sources of intent. If needed the RMIO can also modify or delete its intents."
+        },
+        {
+          "source": "O-RAN.WG1.TS.SMO-ARCH-R005-v02.00.docx",
+          "text": "The role of a service producer that receives objectives through intents from one or multiple RMIOs and fulfils and assures these objectives is referred to as RMIH. Furthermore, an RMIH provides intent reports to RMIOs informing them about the fulfilment status details regarding their intent. RMIOs determines the properties of intent report sending. This includes, for example, the frequency of report sending and the content of the intent reports."
+        }
+      ]
+    }
+  }
+}

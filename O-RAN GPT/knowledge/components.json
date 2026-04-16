@@ -1,0 +1,202 @@
+[
+  {
+    "id": "component_smo",
+    "name": "SMO",
+    "aliases": ["Service Management and Orchestration"],
+    "category": "component",
+    "definition": "Central management, orchestration, and automation layer.",
+    "role": "Manages O-RAN functions and orchestrates O-Cloud resources.",
+    "hosts": ["Non-RT RIC"],
+    "uses_interfaces": ["O1", "O2"],
+    "related_components": ["Non-RT RIC", "O-Cloud"],
+    "common_confusions": ["Near-RT RIC"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "SMO",
+        "text": "Role: Central management, orchestration, and automation layer"
+      }
+    ]
+  },
+  {
+    "id": "component_non_rt_ric",
+    "name": "Non-RT RIC",
+    "aliases": ["Non-Real-Time RAN Intelligent Controller"],
+    "category": "component",
+    "definition": "Non-real-time intelligence and policy layer.",
+    "role": "Handles long-timescale optimization, policy generation, and ML training.",
+    "hosts": ["rApp"],
+    "uses_interfaces": ["A1", "R1"],
+    "related_components": ["SMO", "Near-RT RIC", "rApp"],
+    "common_confusions": ["Near-RT RIC"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Non-RT RIC",
+        "text": "Role: Non-real-time intelligence and policy layer"
+      }
+    ]
+  },
+  {
+    "id": "component_near_rt_ric",
+    "name": "Near-RT RIC",
+    "aliases": ["Near-Real-Time RAN Intelligent Controller"],
+    "category": "component",
+    "definition": "Near-real-time control and optimization layer.",
+    "role": "Processes KPIs and makes near-real-time control decisions.",
+    "hosts": ["xApp"],
+    "uses_interfaces": ["E2", "A1", "O1", "Y1"],
+    "related_components": ["Non-RT RIC", "xApp", "O-CU-CP", "O-CU-UP", "O-DU"],
+    "common_confusions": ["Non-RT RIC", "SMO"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "Near-RT RIC",
+        "text": "Role: Near-real-time control and optimization layer"
+      }
+    ]
+  },
+  {
+    "id": "component_o_cu_cp",
+    "name": "O-CU-CP",
+    "aliases": ["O-CU Control Plane"],
+    "category": "component",
+    "definition": "Control-plane central unit.",
+    "role": "Hosts RRC and control-plane PDCP functions.",
+    "hosts": [],
+    "uses_interfaces": ["E2", "O1"],
+    "related_components": ["Near-RT RIC", "O-CU-UP", "O-DU"],
+    "common_confusions": ["O-CU-UP"],
+    "question_types": ["definition", "comparison"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-CU-CP",
+        "text": "Role: Control plane central unit"
+      }
+    ]
+  },
+  {
+    "id": "component_o_cu_up",
+    "name": "O-CU-UP",
+    "aliases": ["O-CU User Plane"],
+    "category": "component",
+    "definition": "User-plane central unit.",
+    "role": "Hosts user-plane PDCP and SDAP functions.",
+    "hosts": [],
+    "uses_interfaces": ["E2", "O1"],
+    "related_components": ["O-CU-CP", "O-DU"],
+    "common_confusions": ["O-CU-CP"],
+    "question_types": ["definition", "comparison"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-CU-UP",
+        "text": "Role: User plane central unit"
+      }
+    ]
+  },
+  {
+    "id": "component_o_du",
+    "name": "O-DU",
+    "aliases": ["O-RAN Distributed Unit"],
+    "category": "component",
+    "definition": "Distributed unit hosting RLC, MAC, and High-PHY.",
+    "role": "Executes distributed radio processing and acts as an E2 Node.",
+    "hosts": [],
+    "uses_interfaces": ["E2", "O1", "Open Fronthaul"],
+    "related_components": ["Near-RT RIC", "O-RU", "O-CU-CP", "O-CU-UP"],
+    "common_confusions": ["O-RU"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-DU",
+        "text": "Role: Distributed unit"
+      }
+    ]
+  },
+  {
+    "id": "component_o_ru",
+    "name": "O-RU",
+    "aliases": ["O-RAN Radio Unit"],
+    "category": "component",
+    "definition": "Radio unit hosting Low-PHY and RF processing.",
+    "role": "Executes radio and low-PHY functions.",
+    "hosts": [],
+    "uses_interfaces": ["Open Fronthaul"],
+    "related_components": ["O-DU"],
+    "common_confusions": ["O-DU"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-RU",
+        "text": "Role: Radio unit"
+      }
+    ]
+  },
+  {
+    "id": "component_o_cloud",
+    "name": "O-Cloud",
+    "aliases": ["Cloud platform"],
+    "category": "component",
+    "definition": "Infrastructure platform hosting O-RAN functions and workloads.",
+    "role": "Provides compute and lifecycle support for hosted O-RAN functions.",
+    "hosts": [],
+    "uses_interfaces": ["O2"],
+    "related_components": ["SMO", "Near-RT RIC", "O-CU-CP", "O-CU-UP", "O-DU"],
+    "common_confusions": [],
+    "question_types": ["definition", "comparison"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "O-Cloud",
+        "text": "Role: Infrastructure platform hosting O-RAN functions and workloads"
+      }
+    ]
+  },
+  {
+    "id": "component_xapp",
+    "name": "xApp",
+    "aliases": ["xApp application"],
+    "category": "component",
+    "definition": "Near-real-time optimization and control application.",
+    "role": "Runs on Near-RT RIC and performs control through E2-connected nodes.",
+    "hosts": [],
+    "uses_interfaces": ["E2"],
+    "related_components": ["Near-RT RIC"],
+    "common_confusions": ["rApp"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "xApp",
+        "text": "Runs on: Near-RT RIC"
+      }
+    ]
+  },
+  {
+    "id": "component_rapp",
+    "name": "rApp",
+    "aliases": ["rApp application"],
+    "category": "component",
+    "definition": "Non-real-time optimization, policy, and ML application.",
+    "role": "Runs on Non-RT RIC and drives long-timescale optimization.",
+    "hosts": [],
+    "uses_interfaces": ["R1", "A1"],
+    "related_components": ["Non-RT RIC"],
+    "common_confusions": ["xApp"],
+    "question_types": ["definition", "comparison", "flow"],
+    "evidence": [
+      {
+        "file": "components.md",
+        "section": "rApp",
+        "text": "Runs on: Non-RT RIC"
+      }
+    ]
+  }
+]
