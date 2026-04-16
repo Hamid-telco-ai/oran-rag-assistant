@@ -93,7 +93,7 @@ O-RAN-GPT/
 │   └── generate_kb.py
 
 ```
-## Setup & Installation
+## Setup and Installation
 
 ### 1. Clone the repository
 
@@ -153,10 +153,6 @@ This project uses a hybrid knowledge approach:
 
   * `relationships.json` → explicit O-RAN relationships
   * `known_unknowns.json` → controlled uncertainty handling
-
-> Note:
-> The knowledge layer was built using curated telecom references and selected O-RAN source materials. Raw standards and source documents are not included in this public repository.
-
 ---
 
 
