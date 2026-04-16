@@ -80,7 +80,7 @@ O-RAN-GPT/
 ├── .gitignore
 │
 ├── knowledge/                 # Structured domain knowledge
-│   ├── relationships.json     # Telecom/O-RAN relationships
+│   ├── relationships.json     # O-RAN relationships
 │   ├── known_unknowns.json    # Controlled uncertainty handling
 │   └── kb_evidence.json       # Supporting evidence / extracted knowledge
 │
