@@ -92,6 +92,7 @@ O-RAN-GPT/
 │   ├── parse_specs.py
 │   └── generate_kb.py
 
+```
 ## Setup & Installation
 
 ### 1. Clone the repository
