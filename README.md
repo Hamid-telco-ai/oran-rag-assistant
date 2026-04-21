@@ -1,5 +1,8 @@
 # O-RAN GPT – Telecom Knowledge Assistant with RAG
 
+<img width="1082" height="782" alt="Screenshot 2026-04-21 091714" src="https://github.com/user-attachments/assets/83433742-4091-4196-8879-b1cc9697dc96" />
+
+
 ## Overview
 
 O-RAN GPT is a telecom-focused knowledge assistant designed to support engineers working with O-RAN architectures, RIC components, and modern wireless systems. It combines Retrieval-Augmented Generation (RAG), structured domain knowledge, and citation-aware answering to provide reliable, engineering-grade responses.
