@@ -1,6 +1,7 @@
 # O-RAN GPT – Telecom Knowledge Assistant with RAG
 
-<img width="1082" height="782" alt="Screenshot 2026-04-21 091714" src="https://github.com/user-attachments/assets/83433742-4091-4196-8879-b1cc9697dc96" />
+<img width="1912" height="908" alt="Screenshot 2026-04-21 091714" src="https://github.com/user-attachments/assets/f3dbf15f-fa56-49c5-80a8-e263eb4f955a" />
+
 
 
 ## Overview
