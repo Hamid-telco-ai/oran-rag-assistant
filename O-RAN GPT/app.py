@@ -18,64 +18,61 @@ st.set_page_config(page_title="O-RAN GPT", layout="wide")
 st.markdown(
     """
     <style>
-    /* Page background */
     .stApp {
         background:
-            radial-gradient(circle at top left, rgba(120,160,255,0.12), transparent 28%),
-            radial-gradient(circle at top right, rgba(100,200,255,0.10), transparent 30%),
-            radial-gradient(circle at bottom left, rgba(180,220,255,0.14), transparent 30%),
-            linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+            radial-gradient(circle at 15% 20%, rgba(120,160,255,0.18), transparent 28%),
+            radial-gradient(circle at 85% 18%, rgba(120,200,255,0.14), transparent 30%),
+            radial-gradient(circle at 20% 85%, rgba(190,220,255,0.20), transparent 30%),
+            linear-gradient(180deg, #edf3fa 0%, #e8eef7 100%);
     }
 
     .main {
-        padding-top: 1.0rem;
+        padding-top: 1rem;
     }
 
     .block-container {
-        max-width: 980px;
+        max-width: 960px;
         padding-top: 1.2rem;
         padding-bottom: 2rem;
     }
 
-    /* Typography */
     h1 {
-        font-size: 2.6rem !important;
+        font-size: 2.4rem !important;
         font-weight: 800 !important;
-        color: #16255c !important;
-        margin-bottom: 0.15rem !important;
+        color: #162c68 !important;
+        margin-bottom: 0.2rem !important;
         letter-spacing: -0.02em;
     }
 
     h2 {
-        font-size: 1.9rem !important;
+        font-size: 1.85rem !important;
         font-weight: 700 !important;
-        color: #18285f !important;
-        margin-top: 1.1rem !important;
+        color: #1d2f66 !important;
+        margin-top: 1rem !important;
     }
 
     h3 {
-        font-size: 1.35rem !important;
+        font-size: 1.3rem !important;
         font-weight: 700 !important;
-        color: #24366f !important;
+        color: #263a73 !important;
     }
 
     p, li, div, label {
-        font-size: 1.03rem !important;
+        font-size: 1.02rem !important;
         line-height: 1.75 !important;
-        color: #2f3b58 !important;
+        color: #33415f !important;
     }
 
     .app-caption {
-        font-size: 1.08rem;
-        color: #61708f !important;
+        font-size: 1rem;
+        color: #6b7a99 !important;
         margin-bottom: 1.2rem;
     }
 
-    /* Sidebar */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(244,248,255,0.86));
-        border-right: 1px solid rgba(130, 150, 190, 0.20);
-        backdrop-filter: blur(12px);
+        background: linear-gradient(180deg, rgba(255,255,255,0.76), rgba(244,248,255,0.86));
+        border-right: 1px solid rgba(130, 150, 190, 0.18);
+        backdrop-filter: blur(10px);
     }
 
     section[data-testid="stSidebar"] .block-container {
@@ -84,49 +81,38 @@ st.markdown(
         padding-right: 1rem;
     }
 
-    /* Chat messages */
     .stChatMessage {
-        padding: 0.65rem 0 1rem 0;
+        padding: 0.6rem 0 0.8rem 0;
         background: transparent !important;
     }
 
-    /* Assistant answer card */
-    .answer-card {
-        background: rgba(255,255,255,0.72);
-        border: 1px solid rgba(180,190,220,0.32);
-        border-radius: 24px;
-        padding: 24px 28px;
-        box-shadow: 0 10px 30px rgba(31, 55, 110, 0.08);
-        backdrop-filter: blur(10px);
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    /* User bubble */
     .user-question {
-        background: rgba(255,255,255,0.62);
-        border: 1px solid rgba(180,190,220,0.28);
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(190,200,225,0.42);
         border-radius: 16px;
         padding: 12px 16px;
         box-shadow: 0 8px 20px rgba(31,55,110,0.05);
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.8rem;
     }
 
-    /* Source cards */
-    .source-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 12px;
+    .answer-card {
+        background: rgba(255,255,255,0.86);
+        border: 1px solid rgba(190,200,225,0.34);
+        border-radius: 24px;
+        padding: 26px 30px;
+        box-shadow: 0 14px 36px rgba(31, 55, 110, 0.09);
+        backdrop-filter: blur(12px);
         margin-top: 0.6rem;
+        margin-bottom: 1rem;
     }
 
     .source-card {
         border: 1px solid rgba(180,190,220,0.30);
         border-radius: 18px;
         padding: 14px 16px;
-        background: rgba(255,255,255,0.74);
-        box-shadow: 0 8px 20px rgba(31,55,110,0.05);
-        backdrop-filter: blur(8px);
+        background: rgba(255,255,255,0.85);
+        box-shadow: 0 8px 22px rgba(31,55,110,0.05);
+        margin-bottom: 12px;
     }
 
     .source-title {
@@ -138,10 +124,9 @@ st.markdown(
 
     .source-meta {
         font-size: 0.94rem;
-        color: #6b7896 !important;
+        color: #6f7c98 !important;
     }
 
-    /* Confidence badge */
     .confidence-high,
     .confidence-medium,
     .confidence-low {
@@ -172,9 +157,8 @@ st.markdown(
         color: #9e1f1f !important;
     }
 
-    /* Inputs */
     .stChatInput {
-        background: rgba(255,255,255,0.75);
+        background: rgba(255,255,255,0.82);
         border-radius: 20px;
     }
 
@@ -182,11 +166,10 @@ st.markdown(
         font-size: 1rem !important;
     }
 
-    /* Buttons */
     .stButton > button {
         border-radius: 12px;
         border: 1px solid rgba(150,170,210,0.35);
-        background: rgba(255,255,255,0.72);
+        background: rgba(255,255,255,0.76);
         color: #23356d;
         font-weight: 600;
         box-shadow: 0 6px 16px rgba(31,55,110,0.05);
@@ -197,7 +180,6 @@ st.markdown(
         color: #16255c;
     }
 
-    /* Caption */
     .stCaption {
         color: #71809f !important;
     }
@@ -208,7 +190,7 @@ st.markdown(
 
 st.title("O-RAN GPT")
 st.markdown(
-    '<div class="app-caption">Ask Your Question with O-RAN Assistance.</div>',
+    '<div class="app-caption">Ask your O-RAN questions.</div>',
     unsafe_allow_html=True,
 )
 
@@ -373,17 +355,18 @@ def render_source_cards(source_items: list[dict]):
 
     st.markdown("### References")
 
-    cards_html = '<div class="source-grid">'
-    for item in source_items:
-        cards_html += f"""
-        <div class="source-card">
-            <div class="source-title">[{item['num']}] {item['file']}</div>
-            <div class="source-meta">Section: {item['section']}</div>
-        </div>
-        """
-    cards_html += "</div>"
-
-    st.markdown(cards_html, unsafe_allow_html=True)
+    cols = st.columns(2)
+    for i, item in enumerate(source_items):
+        with cols[i % 2]:
+            st.markdown(
+                f"""
+                <div class="source-card">
+                    <div class="source-title">[{item['num']}] {item['file']}</div>
+                    <div class="source-meta">Section: {item['section']}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
 
 def render_matched_sections(question: str, top_k: int = 5):
