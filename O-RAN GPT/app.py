@@ -18,105 +18,188 @@ st.set_page_config(page_title="O-RAN GPT", layout="wide")
 st.markdown(
     """
     <style>
+    /* Page background */
+    .stApp {
+        background:
+            radial-gradient(circle at top left, rgba(120,160,255,0.12), transparent 28%),
+            radial-gradient(circle at top right, rgba(100,200,255,0.10), transparent 30%),
+            radial-gradient(circle at bottom left, rgba(180,220,255,0.14), transparent 30%),
+            linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+    }
+
     .main {
-        padding-top: 1.2rem;
+        padding-top: 1.0rem;
     }
 
     .block-container {
-        max-width: 1200px;
-        padding-top: 1.5rem;
+        max-width: 980px;
+        padding-top: 1.2rem;
         padding-bottom: 2rem;
     }
 
+    /* Typography */
     h1 {
-        font-size: 2.3rem !important;
-        margin-bottom: 0.2rem !important;
+        font-size: 2.6rem !important;
+        font-weight: 800 !important;
+        color: #16255c !important;
+        margin-bottom: 0.15rem !important;
+        letter-spacing: -0.02em;
     }
 
     h2 {
-        font-size: 1.8rem !important;
-        margin-top: 1.2rem !important;
+        font-size: 1.9rem !important;
+        font-weight: 700 !important;
+        color: #18285f !important;
+        margin-top: 1.1rem !important;
     }
 
     h3 {
         font-size: 1.35rem !important;
-        margin-top: 1rem !important;
+        font-weight: 700 !important;
+        color: #24366f !important;
     }
 
     p, li, div, label {
-        font-size: 1.05rem !important;
-        line-height: 1.65 !important;
-    }
-
-    .stChatMessage {
-        padding: 0.8rem 0.2rem 1.2rem 0.2rem;
-    }
-
-    .source-card {
-        border: 1px solid rgba(120,120,120,0.25);
-        border-radius: 12px;
-        padding: 14px 16px;
-        margin-bottom: 12px;
-        background-color: rgba(250,250,250,0.02);
-    }
-
-    .source-title {
-        font-weight: 700;
-        font-size: 1.02rem;
-        margin-bottom: 6px;
-    }
-
-    .source-meta {
-        font-size: 0.95rem;
-        opacity: 0.85;
-        margin-bottom: 6px;
+        font-size: 1.03rem !important;
+        line-height: 1.75 !important;
+        color: #2f3b58 !important;
     }
 
     .app-caption {
         font-size: 1.08rem;
-        opacity: 0.8;
+        color: #61708f !important;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(244,248,255,0.86));
+        border-right: 1px solid rgba(130, 150, 190, 0.20);
+        backdrop-filter: blur(12px);
+    }
+
+    section[data-testid="stSidebar"] .block-container {
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Chat messages */
+    .stChatMessage {
+        padding: 0.65rem 0 1rem 0;
+        background: transparent !important;
+    }
+
+    /* Assistant answer card */
+    .answer-card {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(180,190,220,0.32);
+        border-radius: 24px;
+        padding: 24px 28px;
+        box-shadow: 0 10px 30px rgba(31, 55, 110, 0.08);
+        backdrop-filter: blur(10px);
+        margin-top: 0.5rem;
         margin-bottom: 1rem;
     }
 
-    .stTextInput input, .stChatInput input {
-        font-size: 1.02rem !important;
+    /* User bubble */
+    .user-question {
+        background: rgba(255,255,255,0.62);
+        border: 1px solid rgba(180,190,220,0.28);
+        border-radius: 16px;
+        padding: 12px 16px;
+        box-shadow: 0 8px 20px rgba(31,55,110,0.05);
+        margin-bottom: 0.75rem;
     }
 
-    code {
-        font-size: 0.95rem !important;
+    /* Source cards */
+    .source-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+        margin-top: 0.6rem;
+    }
+
+    .source-card {
+        border: 1px solid rgba(180,190,220,0.30);
+        border-radius: 18px;
+        padding: 14px 16px;
+        background: rgba(255,255,255,0.74);
+        box-shadow: 0 8px 20px rgba(31,55,110,0.05);
+        backdrop-filter: blur(8px);
+    }
+
+    .source-title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 4px;
+        color: #1d2d62 !important;
+    }
+
+    .source-meta {
+        font-size: 0.94rem;
+        color: #6b7896 !important;
+    }
+
+    /* Confidence badge */
+    .confidence-high,
+    .confidence-medium,
+    .confidence-low {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
     .confidence-high {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        background: rgba(0, 180, 90, 0.14);
-        border: 1px solid rgba(0, 180, 90, 0.35);
-        margin-bottom: 12px;
+        background: rgba(57, 181, 74, 0.12);
+        border: 1px solid rgba(57, 181, 74, 0.35);
+        color: #1f6d2a !important;
     }
 
     .confidence-medium {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        background: rgba(220, 160, 0, 0.14);
-        border: 1px solid rgba(220, 160, 0, 0.35);
-        margin-bottom: 12px;
+        background: rgba(230, 170, 45, 0.14);
+        border: 1px solid rgba(230, 170, 45, 0.35);
+        color: #875b00 !important;
     }
 
     .confidence-low {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        background: rgba(220, 40, 40, 0.14);
-        border: 1px solid rgba(220, 40, 40, 0.35);
-        margin-bottom: 12px;
+        background: rgba(220, 70, 70, 0.12);
+        border: 1px solid rgba(220, 70, 70, 0.35);
+        color: #9e1f1f !important;
+    }
+
+    /* Inputs */
+    .stChatInput {
+        background: rgba(255,255,255,0.75);
+        border-radius: 20px;
+    }
+
+    .stChatInput input, .stTextInput input {
+        font-size: 1rem !important;
+    }
+
+    /* Buttons */
+    .stButton > button {
+        border-radius: 12px;
+        border: 1px solid rgba(150,170,210,0.35);
+        background: rgba(255,255,255,0.72);
+        color: #23356d;
+        font-weight: 600;
+        box-shadow: 0 6px 16px rgba(31,55,110,0.05);
+    }
+
+    .stButton > button:hover {
+        border-color: rgba(90,120,200,0.45);
+        color: #16255c;
+    }
+
+    /* Caption */
+    .stCaption {
+        color: #71809f !important;
     }
     </style>
     """,
@@ -289,16 +372,18 @@ def render_source_cards(source_items: list[dict]):
         return
 
     st.markdown("### References")
+
+    cards_html = '<div class="source-grid">'
     for item in source_items:
-        st.markdown(
-            f"""
-            <div class="source-card">
-                <div class="source-title">[{item['num']}] {item['file']}</div>
-                <div class="source-meta">Section: {item['section']}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+        cards_html += f"""
+        <div class="source-card">
+            <div class="source-title">[{item['num']}] {item['file']}</div>
+            <div class="source-meta">Section: {item['section']}</div>
+        </div>
+        """
+    cards_html += "</div>"
+
+    st.markdown(cards_html, unsafe_allow_html=True)
 
 
 def render_matched_sections(question: str, top_k: int = 5):
@@ -388,6 +473,13 @@ def structured_refs_to_source_cards(structured_refs: list[dict]) -> list[dict]:
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
+        if msg["role"] == "user":
+            st.markdown(
+                f'<div class="user-question">{msg["content"]}</div>',
+                unsafe_allow_html=True,
+            )
+            continue
+
         if msg.get("confidence"):
             render_confidence_badge(msg["confidence"])
 
@@ -398,7 +490,9 @@ for msg in st.session_state.messages:
         else:
             if msg.get("source_type"):
                 st.caption(f"Answer source: {msg['source_type']}")
+            st.markdown('<div class="answer-card">', unsafe_allow_html=True)
             st.markdown(msg["content"])
+            st.markdown('</div>', unsafe_allow_html=True)
             if msg.get("source_cards"):
                 render_source_cards(msg["source_cards"])
             if msg.get("show_matches") and msg.get("question"):
@@ -411,12 +505,14 @@ if question:
     st.session_state.messages.append({"role": "user", "content": question})
 
     with st.chat_message("user"):
-        st.markdown(question)
+        st.markdown(f'<div class="user-question">{question}</div>', unsafe_allow_html=True)
 
     with st.chat_message("assistant"):
         if st.session_state.mode == "Knowledge Retrieval Only":
             answer = answer_without_llm(question)
+            st.markdown('<div class="answer-card">', unsafe_allow_html=True)
             st.markdown(answer)
+            st.markdown('</div>', unsafe_allow_html=True)
             render_matched_sections(question)
 
             st.session_state.messages.append(
@@ -476,7 +572,9 @@ if question:
                 )
 
             else:
+                st.markdown('<div class="answer-card">', unsafe_allow_html=True)
                 st.markdown(answer)
+                st.markdown('</div>', unsafe_allow_html=True)
 
                 if structured_refs:
                     source_cards = structured_refs_to_source_cards(structured_refs)
